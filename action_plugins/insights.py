@@ -9,7 +9,6 @@ class ActionModule(ActionBase):
         # setup module
         results = super(ActionModule, self).run(tmp, task_vars)
         remote_user = task_vars.get('ansible_ssh_user') or self._play_context.remote_user
-        results = merge_hash(results, task_vars)
 
         # get args
         # the_args.get('something')
